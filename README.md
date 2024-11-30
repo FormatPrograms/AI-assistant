@@ -15,10 +15,20 @@ Server files:
 - assistant.py
 - entgrak.py
 
+standalone file should work out of the box, provided requirements.txt has installed, and you have set up ollama correctly on the windows device.
+
+reccomended specs:
+what I run for server (applies to standalone too):
+- AMD RX 590 8GB VRAM
+- Intel-I5 4570 processor
+- 24GB RAM
+- 1TB SSD
+
+PI must be model 3 B+ or higher (anything lower might not run the processing script as well, if at all.)
+
 Planned:
-port this to windows, because on windows it basically makes my tts module redundant due to the fact that windows has better espeak voices than linux.
 might just straight up make my gaming pc into a windows server.
 might look into the programming of speech recogniton and find the optimal settings for my mic, or reverse engineer it and make it a little better for my system.
 mobile compatability, probably will use the same tts as the pi (android is just linux for phones so theoretically the voices are the same)
 preformance enhancement, it's a little slow to generate a response right now. so I'm thinking, instead of having the pi process the voice and play it. it just recieves 
-a .mp3 plays it then deletes it.
+a .mp3 plays it then deletes it. (fixed on windows standalone.)
