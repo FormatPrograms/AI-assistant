@@ -35,7 +35,7 @@ def get_audio():
 
 
 def main():
-    prompt = input("$> ")
+    prompt = get_audio()
     gen(prompt)
     eng.say(generated)
 
