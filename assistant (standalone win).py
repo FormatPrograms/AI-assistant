@@ -8,7 +8,7 @@ eng = pyttsx3.init()
 
 
 def gen(prompt):
-	response = oll.chat(model='Llama3.1', messages=[{'role': 'user', 'content': f"{prompt}"},])
+	response = oll.chat(model='Llama3.1:70b', messages=[{'role': 'user', 'content': f"{prompt}"},])
 	global generated
 	generated = response['message']['content']
 
@@ -35,7 +35,7 @@ def get_audio():
 
 
 def main():
-    prompt = get_audio()
+    prompt = "Say one word, that word being test."
     gen(prompt)
     eng.say(generated)
 
@@ -44,6 +44,7 @@ if __name__ == "__main__":
     while True:
         try:
             main()
+            print(generated)
             eng.runAndWait()
         except KeyboardInterrupt:
             print("Program terminated by user.")
