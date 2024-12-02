@@ -1,3 +1,5 @@
+NOW LIVE TO PUBLIC.
+
 This is my first "project" that I didn't steal.
 
 This is an AI system designed to:
@@ -13,7 +15,6 @@ PI files:
 
 Server files:
 - assistant.py
-- entgrak.py
 
 standalone file should work out of the box, provided requirements.txt has installed, and you have set up ollama correctly on the windows device.
 
