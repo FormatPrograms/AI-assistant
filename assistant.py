@@ -1,7 +1,6 @@
 # libraries
 import socket
 import ollama as oll
-from entgrak import entertain_grace as entgrak
 
 
 def gen(c):
@@ -24,10 +23,6 @@ def main():
 		global test
 		test = c.recv(1024).decode()
 		print(test)
-		if "cleo entertain grace" in test:
-			entgrak()
-			msg = "bruh./23"
-			c.send(msg.encode())
 		else:
 			gen(c)
 
